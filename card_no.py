@@ -59,6 +59,9 @@ def password_validator(password):
             break
         else:
             return True
+        
+   #want to implement getting the users name and seeing if their password includes their first or last name
+      #if the password does include users name then it's invalid (False), if not then it's valid (True)
 
           
                         
