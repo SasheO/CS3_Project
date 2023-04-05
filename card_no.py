@@ -39,4 +39,36 @@ if __name__ == "__main__":
     
 import re 
 
+def password_validator(password):
+    bool = True
+    while bool:
+        if (len(password) < 8) or (len(password) > 12): #Checking to make sure length is between 8-12 characters
+            return False
+            break
+        elif not re.search("[A-Z]", password): #Checking to make sure there's an uppercase letter
+            return False
+            break
+        elif not re.search("[a-z]", password): #Checking to make sure there's a lowercase letter
+            return False
+            break
+        elif not re.search("[0-9]", password): #Checking to make sure there's a numerical letter
+            return False
+            break
+        elif not re.search("[@!$#]", password): #Checking to make sure there's special characters 
+            return False
+            break
+        else:
+            return True
+
+          
+                        
+                      
+        
+          
+            
+                            
+        
+        
+
+
 
