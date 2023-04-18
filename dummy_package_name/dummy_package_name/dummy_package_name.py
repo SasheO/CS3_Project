@@ -1,4 +1,6 @@
 import re 
+import string
+import secrets
 
 def password_validator(password):
     bool_ = True

@@ -14,7 +14,7 @@ else:
 with open("README.md", "r") as fh:
     long_description = fh.read()
 setuptools.setup(
-     install_requires=[],        # Dependencies
+     install_requires=[secrets, re, string],        # Dependencies
      python_requires='>=3',                                   # Minimum Python version
      name='dummy_package_name',                                  # Package name
      version=new_version,                                     # Version
