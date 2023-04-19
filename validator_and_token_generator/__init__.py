@@ -13,14 +13,14 @@ relevantpackage
 
 Description
 -----------
-dummy_package_name is a package created for a class project to validate certain strings such as credit/debit card numbers, and generate alphanumeric tokens.
+validator_and_token_generator is a package created for a class project to validate certain strings such as credit/debit card numbers, and generate alphanumeric tokens.
 
 Example
 -------
 >>> # Import library
->>> from dummy_package_name import dummy_package_name
->>> # Generate toke
->>> token = generate_token(lenghth=10)
+>>> from validator_and_token_generator import validator_and_token_generator
+>>> # Generate token
+>>> _token = generate_token(length=10)
 
 References
 ----------

@@ -3,7 +3,7 @@ import setuptools
 import re
 
 # Extract the version from the init file.
-VERSIONFILE="relevantpackage/__init__.py"
+VERSIONFILE="validator_and_token_generator/__init__.py"
 getversion = re.search( r"^__version__ = ['\"]([^'\"]*)['\"]", open(VERSIONFILE, "rt").read(), re.M)
 if getversion:
     new_version = getversion.group(1)
@@ -14,9 +14,9 @@ else:
 with open("README.md", "r") as fh:
     long_description = fh.read()
 setuptools.setup(
-     install_requires=[secrets, re, string],        # Dependencies
+     install_requires=['secrets'],        # Dependencies
      python_requires='>=3',                                   # Minimum Python version
-     name='dummy_package_name',                                  # Package name
+     name='validator_and_token_generator',                                  # Package name
      version=new_version,                                     # Version
      author='SasheO, Xaiver71, emilyyjx',                                     # Author name
      author_email='mezisashe.ojuba@bison.howard.edu, malcolm.gray@bison.howard.edu, emily.jones@bison.howard.edu',                           # Author mail
