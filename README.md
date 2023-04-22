@@ -11,16 +11,12 @@
 ---------
 
 ### Install relevantpackagefrom PyPi.
-```bash
+bash
 pip install relevantpackage
-```
 
-#### Example
-```python
-  # Import library
-  from relevantpackage import Relevantpackage
-  # Initialize
-  model = Relevantpackage(message='Hello World')
-  # Run the model
-  model.show()
-``` 
+# Import library
+from validator_and_token_generator import validator_and_token_generator
+# Initialize
+initialize = validator_and_token_generator(message='Validator and Token Generator is running')
+# Run the model
+intialize.show()
