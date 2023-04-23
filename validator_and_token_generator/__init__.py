@@ -8,7 +8,7 @@ __version__ = '0.1.0'
 
 # module level doc-string
 __doc__ = """
-relevantpackage
+validator_and_token_generator
 ================
 
 Description
@@ -18,9 +18,9 @@ validator_and_token_generator is a package created for a class project to valida
 Example
 -------
 >>> # Import library
->>> from validator_and_token_generator import validator_and_token_generator
+>>> import validator_and_token_generator
 >>> # Generate token
->>> _token = generate_token(length=10)
+>>> _token = validator_and_token_generator.token_generator(length=10)
 
 References
 ----------
