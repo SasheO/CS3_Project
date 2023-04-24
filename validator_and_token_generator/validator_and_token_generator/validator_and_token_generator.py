@@ -59,6 +59,15 @@ def token_generator(token_length):
             break
 
 def relative_time(_time):
+    '''
+    gives the relative time from a datetime object passed in as an argument
+    
+    input: 
+        _time: (datetime) the datetime object
+
+    output:
+        str: the time relative to now
+    '''
     diff = datetime.now() - _time
     days = (diff.days, "day")
     seconds = (diff.seconds, "second")
@@ -69,8 +78,13 @@ def relative_time(_time):
 
     for x in [years, months, weeks, days, minutes, seconds]:
         if x[0] != 0:
-            if x[1] == 1:
-                return str(x[0]) + " " + x[1] + " ago"
+            if x[1] == 1 or x[1] == -1:
+                output = str(x[0]) + " " + x[1]
             else:
-                return str(x[0]) + " " + x[1] + "s ago"
+                output = str(x[0]) + " " + x[1] + "s"
+            
+            if x[0] < 0:
+                return "in " + output[1:]
+            else:
+                return output + " ago"
     return "just now"
