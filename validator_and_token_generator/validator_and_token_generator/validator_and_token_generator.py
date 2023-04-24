@@ -1,6 +1,7 @@
 import re 
 import string
 import secrets
+from datetime import datetime
 
 def password_validator(password):
     bool_ = True
@@ -56,3 +57,20 @@ def token_generator(token_length):
                 and any(c.isupper() for c in token)
                 and sum(c.isdigit() for c in token) >= 3):
             break
+
+def relative_time(_time):
+    diff = datetime.now() - _time
+    days = (diff.days, "day")
+    seconds = (diff.seconds, "second")
+    minutes = (int(seconds[0]/60), "minute")
+    weeks = (int(days[0]/7), "week")
+    months = (int(days[0]/30), "month")
+    years = (int(days[0]/365), "year")
+
+    for x in [years, months, weeks, days, minutes, seconds]:
+        if x[0] != 0:
+            if x[1] == 1:
+                return str(x[0]) + " " + x[1] + " ago"
+            else:
+                return str(x[0]) + " " + x[1] + "s ago"
+    return "just now"
