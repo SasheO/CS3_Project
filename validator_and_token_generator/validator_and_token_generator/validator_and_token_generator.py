@@ -50,13 +50,20 @@ def valid_card_no(card_no):
     return summ%10 == 0
 
 def token_generator(token_length):
+    '''
+    Alphenumeric creates a variable that holds a selection of randomly generated letters and digits
+    
+    The while loop creates a process in which the selection of letters and digits are chosen to create the token variable.
+    
+    The last line returns to Token variable so that it can be used throughout the rest of the code
+    '''
     alphenumeric = string.ascii_letters + string.digits
     while True:
         token = ''.join(secrets.choice(alphenumeric) for i in range(token_length))
         if (any(c.islower() for c in token)
                 and any(c.isupper() for c in token)
                 and sum(c.isdigit() for c in token) >= 3):
-            return token
+            return(token)
 
 def relative_time(_time):
     '''
