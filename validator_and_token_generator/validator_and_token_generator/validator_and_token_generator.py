@@ -5,7 +5,7 @@ from datetime import datetime
 
 def password_validator(password):
     bool_ = True
-    while bool_:
+    while bool:
         if (len(password) < 8) or (len(password) > 12): #Checking to make sure length is between 8-12 characters
             return False
             break
