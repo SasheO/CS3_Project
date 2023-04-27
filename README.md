@@ -12,7 +12,7 @@
 
 ### Install relevantpackagefrom PyPi.
 bash
-pip install relevantpackage
+pip install validator_and_token_generator
 
 # Import library
 from validator_and_token_generator import validator_and_token_generator
@@ -20,3 +20,12 @@ from validator_and_token_generator import validator_and_token_generator
 initialize = validator_and_token_generator(message='Validator and Token Generator is running')
 # Run the model
 intialize.show()
+
+# validator_and_token_generator is a package created for a class project to validate certain strings such as credit/debit card numbers, and generate alphanumeric tokens.
+
+Example
+-------
+>>> # Import library
+>>> import validator_and_token_generator
+>>> # Generate token
+>>> _token = validator_and_token_generator.token_generator(length=10)
