@@ -56,6 +56,12 @@ def token_generator(token_length):
     The while loop creates a process in which the selection of letters and digits are chosen to create the token variable.
     
     The last line returns to Token variable so that it can be used throughout the rest of the code
+
+    input:
+        token_length: determine length of token
+
+    output:
+        token: a string of compiled letters and numbers
     '''
     alphenumeric = string.ascii_letters + string.digits
     while True:
