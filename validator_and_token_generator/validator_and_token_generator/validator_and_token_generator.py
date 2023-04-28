@@ -4,25 +4,29 @@ import secrets
 from datetime import datetime
 
 def password_validator(password):
-    bool_ = True
-    while bool_:
-        if (len(password) < 8) or (len(password) > 12): #Checking to make sure length is between 8-12 characters
-            return False
-            break
-        elif not re.search("[A-Z]", password): #Checking to make sure there's an uppercase letter
-            return False
-            break
-        elif not re.search("[a-z]", password): #Checking to make sure there's a lowercase letter
-            return False
-            break
-        elif not re.search("[0-9]", password): #Checking to make sure there's a numerical letter
-            return False
-            break
-        elif not re.search("[@!$#]", password): #Checking to make sure there's special characters 
-            return False
-            break
-        else:
-            return True
+    '''
+    Checks whether or not a password is valid.
+    Input:
+        password_validator: "string"
+    Output:
+        bool: If password is valid then the program will return True, if not the program will return False. 
+    '''
+    if (len(password) < 8) or (len(password) > 12): #Checking to make sure length is between 8-12 characters
+        return False
+            
+    elif not re.search("[A-Z]", password): #Checking to make sure there's an uppercase letter
+        return False
+         
+    elif not re.search("[a-z]", password): #Checking to make sure there's a lowercase letter
+        return False
+       
+    elif not re.search("[0-9]", password): #Checking to make sure there's a numerical letter
+        return False
+         
+    elif not re.search("[@!$#]", password): #Checking to make sure there's special characters 
+        return False
+    else:
+        return True
 
 def valid_card_no(card_no):
     '''
