@@ -1,6 +1,6 @@
 # Change the content according to your package.
 # from directory.filename.py import classname
-from validator_and_token_generator.validator_and_token_generator.validator_and_token_generator import *
+from validator_and_token_generator.validator_and_token_generator import *
 
 author='SasheO, Xaiver71, emilyyjx'
 author_email='mezisashe.ojuba@bison.howard.edu, malcolm.gray@bison.howard.edu, emily.jones@bison.howard.edu'
