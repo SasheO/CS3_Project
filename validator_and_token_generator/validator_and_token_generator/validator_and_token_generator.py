@@ -10,6 +10,8 @@ def password_validator(password):
         password_validator: "string"
     Output:
         bool: If password is valid then the program will return True, if not the program will return False. 
+        
+    * A special character would be considered @, !, $, or a #
     '''
     if (len(password) < 8) or (len(password) > 12): #Checking to make sure length is between 8-12 characters
         return False
